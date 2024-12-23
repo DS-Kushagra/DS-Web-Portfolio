@@ -20,7 +20,7 @@ const Services = () => {
   }, []);
 
   return (
-    <Section id="skills">
+    <Section id="skills" className="overflow-hidden">
       <div className="container">
         <Heading
           title="Data Science Expertise & Skills"
@@ -29,29 +29,24 @@ const Services = () => {
 
         <div className="relative">
           {/* Main Skills Section */}
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-            <div
-              className={`absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto transition-transform duration-700 ease-out`}
-              style={{
-                // transform: `translateY(${scrollY * 0.1}px)`,
-                transform: `scale(${1 + scrollY * 0.00008})`,
-                top: 0,
-                left: 0,
-                // position: "fixed", // Keep the image fixed in place
-                zIndex: -1, // Ensure it stays behind the content
-                objectFit: "cover", // Ensure the image scales properly
-              }}
-            >
-              <img
-                className="w-full h-full object-contain md:object-right" // Prevent image cropping
-                width={800}
-                alt="Data Science Visualization"
-                height={730}
-                src={service1}
-              />
+          <div className="relative z-1 flex flex-col lg:flex-row items-center min-h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
+              <div className="relative w-full h-full max-w-[50rem] lg:max-w-none mx-auto">
+                <img
+                  className="w-full h-full object-contain sm:object-cover md:object-right pt-10 sm:pt-20 lg:pt-0"
+                  width={800}
+                  alt="Data Science Visualization"
+                  height={730}
+                  src={service1}
+                  style={{
+                    transform: `scale(${1 + scrollY * 0.00008})`,
+                    transformOrigin: "center center",
+                  }}
+                />
+              </div>
             </div>
 
-            <div className="relative z-1 max-w-[17rem] ml-auto">
+            <div className="relative z-1 max-w-[17rem] mt-auto lg:mt-0 lg:ml-auto">
               <h4 className="h4 mb-4">Core Competencies</h4>
               <p className="body-2 mb-[3rem] text-n-3">
                 Specialized in machine learning, statistical analysis, and data
@@ -70,26 +65,27 @@ const Services = () => {
               </ul>
             </div>
 
-            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
+            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg:right-auto lg:bottom-8 lg:-translate-x-1/2" />
           </div>
 
           {/* Project Highlights Grid */}
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             {/* Data Analysis Section */}
             <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
-              <div
-                className="absolute inset-0 transition-transform duration-700 ease-out"
-                style={{
-                  transform: `scale(${1 + scrollY * 0.00015})`, // Reduced zoom effect
-                }}
-              >
-                <img
-                  src={service2}
-                  className="h-full w-full object-contain" // Prevent image cropping
-                  width={600}
-                  height={700}
-                  alt="Data Analysis Visualization"
-                />
+              <div className="absolute inset-0">
+                <div className="relative w-full h-full max-w-[40rem] mx-auto">
+                  <img
+                    src={service2}
+                    className="h-full w-full object-contain sm:object-cover"
+                    width={600}
+                    height={700}
+                    alt="Data Analysis Visualization"
+                    style={{
+                      transform: `scale(${1 + scrollY * 0.00015})`,
+                      transformOrigin: "center center",
+                    }}
+                  />
+                </div>
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
@@ -140,7 +136,7 @@ const Services = () => {
                           width={tool.width}
                           height={tool.height}
                           alt={tool.title}
-                          className="transition-transform duration-300 transform hover:scale-110" // Hover zoom for icons
+                          className="transition-transform duration-300 transform hover:scale-110"
                         />
                       </div>
                     </li>
@@ -160,14 +156,15 @@ const Services = () => {
               </div>
 
               <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
-                {/* Applying the fade-in animation to the third image only */}
-                <img
-                  src={service3}
-                  className="w-full h-full object-contain transition-transform duration-700 hover:scale-105 animate-fade-in" // Apply fade-in animation here
-                  width={520}
-                  height={400}
-                  alt="Deep Learning Visualization"
-                />
+                <div className="relative w-full h-full max-w-[40rem] mx-auto">
+                  <img
+                    src={service3}
+                    className="w-full h-full object-contain sm:object-cover transition-transform duration-700 hover:scale-105 animate-fade-in"
+                    width={520}
+                    height={400}
+                    alt="Deep Learning Visualization"
+                  />
+                </div>
               </div>
             </div>
           </div>
