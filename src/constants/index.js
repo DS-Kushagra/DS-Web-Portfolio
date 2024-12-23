@@ -218,35 +218,35 @@ export const dataScienceTools = [
   {
     id: 1,
     title: "Python",
-    icon: "src/assets/python.png", // Replace with your actual icon path
+    icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg", // Replace with your actual icon path
     width: 31,
     height: 24,
   },
   {
     id: 2,
     title: "TensorFlow",
-    icon: "src/assets/tensor.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
     width: 31,
     height: 24,
   },
   {
     id: 3,
     title: "PyTorch",
-    icon: "src/assets/pytorch.png",
+    icon: "https://blog.christianperone.com/wp-content/uploads/2018/10/pytorch-logo.png",
     width: 31,
     height: 24,
   },
   {
     id: 4,
     title: "Scikit-learn",
-    icon: "src/assets/scikit-learn.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
     width: 31,
     height: 24,
   },
   {
     id: 5,
-    title: "Seaborn",
-    icon: "src/assets/seaborn.png",
+    title: "Statistics",
+    icon: "https://cdn-icons-png.flaticon.com/512/8920/8920975.png",
     width: 31,
     height: 24,
   },
@@ -382,25 +382,28 @@ export const socials = [
   {
     id: "0",
     title: "LinkedIn",
-    iconUrl: "/src/assets/socials/linkedin.png",
+    iconUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
     url: "https://www.linkedin.com/in/kushagra--agrawal/",
   },
   {
     id: "1",
     title: "Twitter",
-    iconUrl: "/src/assets/socials/twitter.png",
+    iconUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg",
     url: "https://x.com/KushagraA15",
   },
   {
     id: "2",
     title: "Instagram",
-    iconUrl: "/src/assets/socials/instagram.png",
+    iconUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
     url: "https://www.instagram.com/_kushagra.ag_/",
   },
   {
     id: "3",
     title: "GitHub",
-    iconUrl: "/src/assets/socials/github.png",
+    iconUrl: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
     url: "https://github.com/DS-Kushagra",
   },
   // {
