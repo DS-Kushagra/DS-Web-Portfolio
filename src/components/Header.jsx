@@ -140,7 +140,7 @@ const Header = () => {
 
         {/* Desktop Download Button */}
         <motion.a
-          href="\Final-Resume.pdf"
+          href="\Resume.pdf"
           download="Kushagra-Resume.pdf"
           className="button hidden lg:flex text-n-1 font-bold border border-color-1 px-4 py-2 rounded-lg transition-transform transform hover:scale-105 hover:bg-color-1 hover:text-white"
           whileHover={{ scale: 1.1 }}
