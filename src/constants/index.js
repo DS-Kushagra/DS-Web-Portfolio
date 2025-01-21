@@ -37,38 +37,10 @@ import {
 } from "../assets";
 
 export const navigation = [
-  {
-    id: "0",
-    title: "Projects",
-    url: "#features",
-  },
-  {
-    id: "1",
-    title: "Publications",
-    url: "#publications",
-  },
-  {
-    id: "2",
-    title: "Contribute",
-    url: "#call-for-contributors",
-  },
-  {
-    id: "3",
-    title: "Currently working on",
-    url: "#roadmap",
-  },
-//   {
-//     id: "4",
-//     title: "New account",
-//     url: "#signup",
-//     onlyMobile: true,
-//   },
-//   {
-//     id: "5",
-//     title: "Sign in",
-//     url: "#login",
-//     onlyMobile: true,
-//   },
+  { id: "0", title: "Projects", url: "#features" },
+  { id: "1", title: "Publications", url: "#publications" },
+  { id: "2", title: "Contribute", url: "#call-for-contributors" },
+  { id: "3", title: "Currently working on", url: "#roadmap" },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -131,94 +103,34 @@ export const collabText =
   "With smart automation and top-notch communication, it's the perfect solution for teams looking to work smarter.";
 
 export const collabContent = [
-  {
-    id: "0",
-    title: "Seamless Integration",
-    text: collabText,
-  },
-  {
-    id: "1",
-    title: "Smart Automation",
-  },
-  {
-    id: "2",
-    title: "Top-notch Communication",
-  },
+  { id: "0", title: "Seamless Integration", text: collabText },
+  { id: "1", title: "Smart Automation" },
+  { id: "2", title: "Top-notch Communication" },
 ];
 
 export const collabApps = [
-  {
-    id: "0",
-    title: "Figma",
-    icon: figma,
-    width: 26,
-    height: 36,
-  },
-  {
-    id: "1",
-    title: "Notion",
-    icon: notion,
-    width: 34,
-    height: 36,
-  },
-  {
-    id: "2",
-    title: "Discord",
-    icon: discord,
-    width: 36,
-    height: 28,
-  },
-  {
-    id: "3",
-    title: "Slack",
-    icon: slack,
-    width: 34,
-    height: 35,
-  },
-  {
-    id: "4",
-    title: "Photoshop",
-    icon: photoshop,
-    width: 34,
-    height: 34,
-  },
-  {
-    id: "5",
-    title: "Protopie",
-    icon: protopie,
-    width: 34,
-    height: 34,
-  },
-  {
-    id: "6",
-    title: "Framer",
-    icon: framer,
-    width: 26,
-    height: 34,
-  },
-  {
-    id: "7",
-    title: "Raindrop",
-    icon: raindrop,
-    width: 38,
-    height: 32,
-  },
+  { id: "0", title: "Figma", icon: figma, width: 26, height: 36 },
+  { id: "1", title: "Notion", icon: notion, width: 34, height: 36 },
+  { id: "2", title: "Discord", icon: discord, width: 36, height: 28 },
+  { id: "3", title: "Slack", icon: slack, width: 34, height: 35 },
+  { id: "4", title: "Photoshop", icon: photoshop, width: 34, height: 34 },
+  { id: "5", title: "Protopie", icon: protopie, width: 34, height: 34 },
+  { id: "6", title: "Framer", icon: framer, width: 26, height: 34 },
+  { id: "7", title: "Raindrop", icon: raindrop, width: 38, height: 32 },
 ];
-
-// In your constants/index.js file
 
 export const dataAnalysisSkills = [
   "Machine Learning Model Development",
   "Statistical Analysis & Hypothesis Testing",
   "Data Cleaning & Preprocessing",
-  "Feature Engineering & Selection"
+  "Feature Engineering & Selection",
 ];
 
 export const dataScienceTools = [
   {
     id: 1,
     title: "Python",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg", // Replace with your actual icon path
+    icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
     width: 31,
     height: 24,
   },
@@ -255,61 +167,30 @@ export const dataScienceTools = [
 export const projectHighlights = [
   {
     title: "Data Analysis",
-    description: "In-depth exploratory data analysis and statistical modeling using Python and R",
-    skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn"]
+    description:
+      "In-depth exploratory data analysis and statistical modeling using Python",
+    skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    url: "https://github.com/DS-Kushagra/Data-Analysis-Repo",
   },
   {
     title: "Machine Learning",
     description: "Building and deploying ML models for real-world applications",
-    skills: ["Scikit-learn", "TensorFlow", "PyTorch"]
+    skills: ["Scikit-learn", "TensorFlow", "PyTorch"],
+    url: "https://github.com/DS-Kushagra/Machine-Learning-Repo",
   },
   {
     title: "Deep Learning",
-    description: "Developing neural networks for complex pattern recognition tasks",
-    skills: ["CNN", "RNN", "LSTM", "Transformers"]
-  }
+    description:
+      "Developing neural networks for complex pattern recognition tasks",
+    skills: ["CNN", "RNN", "LSTM", "Transformers"],
+    url: "https://github.com/DS-Kushagra/Deep-Learning-Repo",
+  },
 ];
 
-// export const pricing = [
-//   {
-//     id: "0",
-//     title: "Basic",
-//     description: "AI chatbot, personalized recommendations",
-//     price: "0",
-//     features: [
-//       "An AI chatbot that can understand your queries",
-//       "Personalized recommendations based on your preferences",
-//       "Ability to explore the app and its features without any cost",
-//     ],
-//   },
-//   {
-//     id: "1",
-//     title: "Premium",
-//     description: "Advanced AI chatbot, priority support, analytics dashboard",
-//     price: "9.99",
-//     features: [
-//       "An advanced AI chatbot that can understand complex queries",
-//       "An analytics dashboard to track your conversations",
-//       "Priority support to solve issues quickly",
-//     ],
-//   },
-//   {
-//     id: "2",
-//     title: "Enterprise",
-//     description: "Custom AI chatbot, advanced analytics, dedicated account",
-//     price: null,
-//     features: [
-//       "An AI chatbot that can understand your queries",
-//       "Personalized recommendations based on your preferences",
-//       "Ability to explore the app and its features without any cost",
-//     ],
-//   },
-// ];
-
-export const benefits = [
+export const projects = [
   {
     id: "0",
-    title: "Jarvis Voice  Assistant",
+    title: "Jarvis Voice Assistant",
     text: "A voice assistant capable of performing tasks like opening websites, fetching news, & generating AI-driven responses using OpenAI API, with integrated speech recognition & text-to-speech features.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
@@ -317,30 +198,35 @@ export const benefits = [
     status: "done",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
     sourceCodeUrl:
-      "https://github.com/DS-Kushagra/Jarvis-Voice-Assistant-Project", // Added source code URL
+      "https://github.com/DS-Kushagra/Jarvis-Voice-Assistant-Project",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["AI", "Python"],
   },
   {
     id: "1",
     title: "AI ChatBot",
-    text: " Designed an automated conversational bot using OpenAI API to analyze chat history and generate context-aware, humorous, and interactive responses using Python.",
+    text: "Designed an automated conversational bot using OpenAI API to analyze chat history and generate context-aware, humorous, and interactive responses using Python.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
-    light: true,
     status: "done",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl: "https://github.com/DS-Kushagra/AI-ChatBot", // Added source code URL
+    sourceCodeUrl: "https://github.com/DS-Kushagra/AI-ChatBot",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["AI", "Python"],
   },
   {
     id: "2",
-    title: "Job Scrapper",
-    text: "Developed a web scraper using Python, using BeautifulSoup library, and CSV to extract and store job listings from Indeed(or any other site you want), including titles, companies, locations, and descriptions.",
+    title: "Job Scraper",
+    text: "Developed a web scraper using Python, BeautifulSoup library, and CSV to extract and store job listings from Indeed (or any other site), including titles, companies, locations, and descriptions.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
     status: "done",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl: "https://github.com/DS-Kushagra/Job-Scrapping-Project", // Added source code URL
+    sourceCodeUrl: "https://github.com/DS-Kushagra/Job-Scrapping-Project",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["Python", "Web Scraping"],
   },
   {
     id: "3",
@@ -352,7 +238,9 @@ export const benefits = [
     status: "done",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
     sourceCodeUrl:
-      "https://github.com/DS-Kushagra/Social-Media-Analysis-Project", // Added source code URL
+      "https://github.com/DS-Kushagra/Social-Media-Analysis-Project",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["Data Analysis"],
   },
   {
     id: "4",
@@ -363,53 +251,60 @@ export const benefits = [
     imageUrl: benefitImage2,
     status: "done",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl: "https://github.com/DS-Kushagra/Customer-Risk-Analysis", // Added source code URL
+    sourceCodeUrl: "https://github.com/DS-Kushagra/Customer-Risk-Analysis",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["PowerBI", "Data Analysis"],
   },
   {
     id: "5",
-    title: "New Project",
-    text: "New Projects will be available soon. Stay Tuned!!",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
+    title: "Network Security",
+    text: "Currently this project is in progress. I will update the information and source code of this project it once it gets completed",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
-    status: "pending",
+    status: "",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl: "#", // Added source code URL
+    sourceCodeUrl:
+      "https://github.com/DS-Kushagra/Customer-Risk-Analysis-Project",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["AI", "ML", "Data Science"],
   },
 ];
 
-export const socials = [
+export const dataScienceProjects = [
   {
     id: "0",
-    title: "LinkedIn",
-    iconUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
-    url: "https://www.linkedin.com/in/kushagra--agrawal/",
+    title: "AI-based Chatbot",
+    description:
+      "An advanced conversational chatbot using NLP techniques for businesses to offer automated customer support.",
+    link: "https://github.com/DS-Kushagra/AI-based-Chatbot",
   },
   {
     id: "1",
-    title: "Twitter",
-    iconUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg",
-    url: "https://x.com/KushagraA15",
+    title: "Customer Segmentation Model",
+    description:
+      "Implemented a clustering model to analyze customer behavior and segment them based on purchasing patterns.",
+    link: "https://github.com/DS-Kushagra/Customer-Segmentation-Model",
+  },
+];
+
+export const publications = [
+  {
+    id: "0",
+    title: "Data Science Approach to Predict Customer Churn",
+    description:
+      "Explores various machine learning techniques to predict customer churn using historical data and model optimization techniques.",
+    link: "https://medium.com/@ds_kushagra/data-science-approach-to-predict-customer-churn-5249eb10cf1e",
+    iconUrl: file02,
+    technologies: ["Data Science", "Machine Learning"],
   },
   {
-    id: "2",
-    title: "Instagram",
-    iconUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
-    url: "https://www.instagram.com/_kushagra.ag_/",
+    id: "1",
+    title: "AI and its Role in Business Automation",
+    description:
+      "A deep dive into the implementation of AI technologies to automate business processes and improve efficiency.",
+    link: "https://medium.com/@ds_kushagra/ai-and-its-role-in-business-automation-e0d3309dcb9c",
+    iconUrl: file02,
+    technologies: ["AI", "Business Automation"],
   },
-  {
-    id: "3",
-    title: "GitHub",
-    iconUrl: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-    url: "https://github.com/DS-Kushagra",
-  },
-  // {
-  //   id: "4",
-  //   title: "Facebook",
-  //   iconUrl: facebook,
-  //   url: "#",
-  // },
 ];

@@ -25,7 +25,7 @@ const Collaboration = () => {
     <Section crosses>
       <div className="container lg:flex">
         {/* Left Section */}
-        <div className="max-w-[25rem]">
+        <div className="max-w-[25rem]" id="collab">
           <h2 className="h2 mb-4 md:mb-8">
             Thinking of starting a new project.
             <br />
