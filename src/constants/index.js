@@ -258,14 +258,13 @@ export const projects = [
   {
     id: "5",
     title: "Network Security",
-    text: "Currently this project is in progress. I will update the information and source code of this project it once it gets completed",
+    text: "This project is a comprehensive solution for detecting and analyzing network security threats using machine learning techniques.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
-    status: "",
+    status: "done",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl:
-      "https://github.com/DS-Kushagra/Customer-Risk-Analysis-Project",
+    sourceCodeUrl: "https://github.com/DS-Kushagra/Network-Security",
     demoUrl: null, // Demo URL can be updated if available
     technologies: ["AI", "ML", "Data Science"],
   },
