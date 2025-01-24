@@ -204,6 +204,19 @@ export const projects = [
   },
   {
     id: "1",
+    title: "Network Security",
+    text: "This project is a comprehensive solution for detecting and analyzing network security threats using machine learning techniques and have various automations to detect phishing attacks.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    iconUrl: benefitIcon1,
+    imageUrl: benefitImage2,
+    status: "done",
+    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
+    sourceCodeUrl: "https://github.com/DS-Kushagra/Network-Security",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["AI", "ML", "Data Science"],
+  },
+  {
+    id: "2",
     title: "AI ChatBot",
     text: "Designed an automated conversational bot using OpenAI API to analyze chat history and generate context-aware, humorous, and interactive responses using Python.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
@@ -216,7 +229,7 @@ export const projects = [
     technologies: ["AI", "Python"],
   },
   {
-    id: "2",
+    id: "3",
     title: "Job Scraper",
     text: "Developed a web scraper using Python, BeautifulSoup library, and CSV to extract and store job listings from Indeed (or any other site), including titles, companies, locations, and descriptions.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
@@ -229,7 +242,7 @@ export const projects = [
     technologies: ["Python", "Web Scraping"],
   },
   {
-    id: "3",
+    id: "4",
     title: "Social Media Usage Analysis",
     text: "Built a data analysis project to evaluate social media usage patterns using statistical techniques, highlighting trends and user behavior insights.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
@@ -243,7 +256,7 @@ export const projects = [
     technologies: ["Data Analysis"],
   },
   {
-    id: "4",
+    id: "5",
     title: "Customer Risk Analysis",
     text: "Designed a dashboard leveraging machine learning models to assess customer risk levels, visualize insights, and aid financial decision-making for businesses.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
@@ -254,19 +267,6 @@ export const projects = [
     sourceCodeUrl: "https://github.com/DS-Kushagra/Customer-Risk-Analysis",
     demoUrl: null, // Demo URL can be updated if available
     technologies: ["PowerBI", "Data Analysis"],
-  },
-  {
-    id: "5",
-    title: "Network Security",
-    text: "This project is a comprehensive solution for detecting and analyzing network security threats using machine learning techniques.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-    status: "done",
-    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl: "https://github.com/DS-Kushagra/Network-Security",
-    demoUrl: null, // Demo URL can be updated if available
-    technologies: ["AI", "ML", "Data Science"],
   },
 ];
 
