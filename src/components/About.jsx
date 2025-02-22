@@ -297,7 +297,7 @@ const ModernAboutSection = () => {
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <span className="bg-gradient-to-r from-purple-500 via-cyan-300 to-purple-500 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-r from-purple-500 via-cyan-300 to-purple-500 text-transparent bg-clip-text" id="About" >
                 {personalInfo.name}
               </span>
             </motion.h1>
