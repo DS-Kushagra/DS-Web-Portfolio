@@ -341,7 +341,7 @@ const Services = () => {
         },
         {
           name: "NLP",
-          level: 40,
+          level: 50,
           color: "bg-gradient-to-r from-indigo-500 to-indigo-600",
         },
       ],
