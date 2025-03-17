@@ -48,7 +48,7 @@ const generateActivityData = () => ({
 const ProjectsSection = ({ techFilter }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const categories = [
-    "all",
+    "NLP",
     "machine-learning",
     "data-analysis",
     "visualization",

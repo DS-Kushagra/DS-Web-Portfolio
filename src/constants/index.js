@@ -63,42 +63,6 @@ export const brainwaveServicesIcons = [
   sliders04,
 ];
 
-export const roadmap = [
-  {
-    id: "0",
-    title: "Voice Assistant",
-    text: "Enable the assistant to understand and respond to voice commands, making it easier for users to interact hands-free.",
-    date: "August 2024",
-    status: "done",
-    imageUrl: roadmap1,
-    colorful: true,
-  },
-  {
-    id: "1",
-    title: "New Ideas",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-    date: "2024",
-    status: "progress",
-    imageUrl: roadmap2,
-  },
-  {
-    id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-    date: "August 2024",
-    status: "done",
-    imageUrl: roadmap3,
-  },
-  {
-    id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-    date: "2024",
-    status: "progress",
-    imageUrl: roadmap4,
-  },
-];
-
 export const collabText =
   "With smart automation and top-notch communication, it's the perfect solution for teams looking to work smarter.";
 
@@ -190,17 +154,16 @@ export const projectHighlights = [
 export const projects = [
   {
     id: "0",
-    title: "Jarvis Voice Assistant",
-    text: "A voice assistant capable of performing tasks like opening websites, fetching news, & generating AI-driven responses using OpenAI API, with integrated speech recognition & text-to-speech features.",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: benefitIcon1,
+    title: "Vision Play",
+    text: "Computer vision project designed for football matches. Leveraging YOLO for object detection, clustering for pixel-based team classification, optical flow for motion tracking, & movement analysis.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
     status: "done",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl:
-      "https://github.com/DS-Kushagra/Jarvis-Voice-Assistant-Project",
+    sourceCodeUrl: "https://github.com/DS-Kushagra/Vision-Play",
     demoUrl: null, // Demo URL can be updated if available
-    technologies: ["AI", "Python"],
+    technologies: ["Computer Vision", "AI", "ML"],
   },
   {
     id: "1",
@@ -217,6 +180,20 @@ export const projects = [
   },
   {
     id: "2",
+    title: "Jarvis Voice Assistant",
+    text: "A voice assistant capable of performing tasks like opening websites, fetching news, & generating AI-driven responses using OpenAI API, with integrated speech recognition & text-to-speech features.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    iconUrl: benefitIcon1,
+    imageUrl: benefitImage2,
+    status: "done",
+    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
+    sourceCodeUrl:
+      "https://github.com/DS-Kushagra/Jarvis-Voice-Assistant-Project",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["AI", "Python"],
+  },
+  {
+    id: "3",
     title: "AI ChatBot",
     text: "Designed an automated conversational bot using OpenAI API to analyze chat history and generate context-aware, humorous, and interactive responses using Python.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
@@ -229,9 +206,9 @@ export const projects = [
     technologies: ["AI", "Python"],
   },
   {
-    id: "3",
+    id: "4",
     title: "Job Scraper",
-    text: "Developed a web scraper using Python, BeautifulSoup library, and CSV to extract and store job listings from Indeed (or any other site), including titles, companies, locations, and descriptions.",
+    text: "Developed a web scraper using Python, BeautifulSoup library, and CSV to extract and store job listings from any website, including titles, companies, locations, and descriptions.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
@@ -241,20 +218,7 @@ export const projects = [
     demoUrl: null, // Demo URL can be updated if available
     technologies: ["Python", "Web Scraping"],
   },
-  {
-    id: "4",
-    title: "Social Media Usage Analysis",
-    text: "Built a data analysis project to evaluate social media usage patterns using statistical techniques, highlighting trends and user behavior insights.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
-    status: "done",
-    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl:
-      "https://github.com/DS-Kushagra/Social-Media-Analysis-Project",
-    demoUrl: null, // Demo URL can be updated if available
-    technologies: ["Data Analysis"],
-  },
+
   {
     id: "5",
     title: "Customer Risk Analysis",
