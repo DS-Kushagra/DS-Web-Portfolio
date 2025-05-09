@@ -168,7 +168,7 @@ export const projects = [
   {
     id: "1",
     title: "Vision Play",
-    text: "Computer vision project designed for football matches. Leveraging YOLO for object detection, clustering for pixel-based team classification, optical flow for motion tracking, & movement analysis.",
+    text: "Computer vision project designed for football matches. Leveraging YOLO for object detection, clustering for pixel-based team classification, optical flow for motion tracking, and movement analysis.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -181,7 +181,7 @@ export const projects = [
   {
     id: "2",
     title: "Network Security",
-    text: "This project is a comprehensive solution for detecting and analyzing network security threats using machine learning techniques and have various automations to detect phishing attacks.",
+    text: "This project is a comprehensive solution for detecting and analyzing network security threats using machine learning and deep learning techniques and have various automations to detect phishing attacks.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
