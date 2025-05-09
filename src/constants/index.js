@@ -154,6 +154,19 @@ export const projectHighlights = [
 export const projects = [
   {
     id: "0",
+    title: "Project-SPECTRA",
+    text: "A domain-agnostic multimodal AI. Engineered for versatility & intelligence, it delivers context-aware responses across fields—blending the power of language, vision, and audio into one groundbreaking system.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    status: "",
+    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
+    // sourceCodeUrl: "https://github.com/DS-Kushagra/Vision-Play",
+    demoUrl: null, // Demo URL can be updated if available
+    technologies: ["Artificial Intelligence"],
+  },
+  {
+    id: "1",
     title: "Vision Play",
     text: "Computer vision project designed for football matches. Leveraging YOLO for object detection, clustering for pixel-based team classification, optical flow for motion tracking, & movement analysis.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
@@ -166,7 +179,7 @@ export const projects = [
     technologies: ["Computer Vision", "AI", "ML"],
   },
   {
-    id: "1",
+    id: "2",
     title: "Network Security",
     text: "This project is a comprehensive solution for detecting and analyzing network security threats using machine learning techniques and have various automations to detect phishing attacks.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
@@ -179,9 +192,9 @@ export const projects = [
     technologies: ["AI", "ML", "Data Science"],
   },
   {
-    id: "2",
+    id: "3",
     title: "Jarvis Voice Assistant",
-    text: "A voice assistant capable of performing tasks like opening websites, fetching news, & generating AI-driven responses using OpenAI API, with integrated speech recognition & text-to-speech features.",
+    text: "Voice assistant performs tasks like opening websites, fetching news, & generating AI-driven responses, with integrated speech recognition & text-to-speech features.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -193,7 +206,7 @@ export const projects = [
     technologies: ["AI", "Python"],
   },
   {
-    id: "3",
+    id: "4",
     title: "AI ChatBot",
     text: "Designed an automated conversational bot using OpenAI API to analyze chat history and generate context-aware, humorous, and interactive responses using Python.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
@@ -206,7 +219,7 @@ export const projects = [
     technologies: ["AI", "Python"],
   },
   {
-    id: "4",
+    id: "5",
     title: "Job Scraper",
     text: "Developed a web scraper using Python, BeautifulSoup library, and CSV to extract and store job listings from any website, including titles, companies, locations, and descriptions.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
@@ -219,19 +232,6 @@ export const projects = [
     technologies: ["Python", "Web Scraping"],
   },
 
-  {
-    id: "5",
-    title: "Customer Risk Analysis",
-    text: "Designed a dashboard leveraging machine learning models to assess customer risk levels, visualize insights, and aid financial decision-making for businesses.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-    status: "done",
-    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl: "https://github.com/DS-Kushagra/Customer-Risk-Analysis",
-    demoUrl: null, // Demo URL can be updated if available
-    technologies: ["PowerBI", "Data Analysis"],
-  },
 ];
 
 export const dataScienceProjects = [
