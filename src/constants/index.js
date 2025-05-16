@@ -154,7 +154,7 @@ export const projectHighlights = [
 export const projects = [
   {
     id: "0",
-    title: "Project-SPECTRA",
+    title: "Project-NYXIS",
     text: "A domain-agnostic multimodal AI. Engineered for versatility & intelligence, it delivers context-aware responses across fields—blending the power of language, vision, and audio into one groundbreaking system.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
