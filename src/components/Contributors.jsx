@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import Particles from "react-particles";
+import Particles from "@tsparticles/react";
 import { loadSlim } from "tsparticles-slim";
 import {
   Brain,
