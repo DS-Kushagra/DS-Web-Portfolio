@@ -326,12 +326,12 @@ const Services = () => {
       skills: [
         {
           name: "Deep Learning",
-          level: 60,
+          level: 70,
           color: "bg-gradient-to-r from-blue-500 to-blue-600",
         },
         {
           name: "Neural Networks",
-          level: 50,
+          level: 60,
           color: "bg-gradient-to-r from-purple-500 to-purple-600",
         },
         {
