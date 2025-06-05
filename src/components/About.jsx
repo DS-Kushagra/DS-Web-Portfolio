@@ -192,9 +192,9 @@ const ModernAboutSection = () => {
   };
 
   const skills = [
+    { name: "Machine Learning", level: 85 },
+    { name: "Generative AI", level: 75 },
     { name: "Python", level: 85 },
-    { name: "Machine Learning", level: 75 },
-    { name: "PowerBI", level: 75 },
     { name: "MongoDB", level: 60 },
     { name: "AWS", level: 60 },
   ];
