@@ -50,7 +50,7 @@ const ProjectsSection = ({ techFilter }) => {
   const categories = [
     "NLP",
     "machine-learning",
-    "data-analysis",
+    "computer vision",
     "visualization",
   ];
 

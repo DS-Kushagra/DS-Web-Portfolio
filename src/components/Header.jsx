@@ -334,7 +334,7 @@ const Header = () => {
   const AnimatedLogo = () => (
     <MagneticButton className="relative" strength={0.3}>
       <motion.a
-        href="#home"
+        href="#Hero"
         className="text-2xl font-bold relative z-10 flex items-center perspective-[1000px]"
         whileHover={{
           rotateX: prefersReducedMotion ? 0 : 10,
