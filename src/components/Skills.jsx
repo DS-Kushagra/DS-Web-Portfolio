@@ -571,8 +571,8 @@ const Services = () => {
                   Core Competencies
                 </h4>
                 <p className="text-n-3 mb-12">
-                  Specialized in machine learning, statistical analysis, and
-                  data visualization
+                  Specialized in machine learning, deep learning, and
+                  neural network
                 </p>
                 <ul className="space-y-2">
                   {dataAnalysisSkills.map((skill, index) => (

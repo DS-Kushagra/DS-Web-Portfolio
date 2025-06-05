@@ -85,8 +85,8 @@ export const collabApps = [
 
 export const dataAnalysisSkills = [
   "Machine Learning Model Development",
+  "GenAI Applications Development",
   "Statistical Analysis & Hypothesis Testing",
-  "Data Cleaning & Preprocessing",
   "Feature Engineering & Selection",
 ];
 
