@@ -400,21 +400,21 @@ const Services = () => {
 
   const timeline = [
     {
-      year: "2024",
-      title: "Advanced Machine Learning Specialization",
+      year: "2025",
+      title: "GenAI Foundation",
       description:
-        "Mastering deep learning and neural networks",
+        "Took first step in exploring & learning Generative AI and its applications in data science",
+    },
+    {
+      year: "2024",
+      title: "Advanced Deep Learning Specialization",
+      description:
+        "Mastering deep learning and neural networks with Transformers Architecture",
     },
     {
       year: "2024",
       title: "Started preps for Data Science",
       description: "Started exploring & learning everything in Data Science",
-    },
-    {
-      year: "2023",
-      title: "Analytics Foundation",
-      description:
-        "Established core competencies in statistical analysis and visualization",
     },
   ];
 
