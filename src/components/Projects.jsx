@@ -51,7 +51,7 @@ const ProjectsSection = ({ techFilter }) => {
     "NLP",
     "machine-learning",
     "computer vision",
-    "visualization",
+    "Artificial Intelligence",
   ];
 
   const filteredProjects = projects.filter(

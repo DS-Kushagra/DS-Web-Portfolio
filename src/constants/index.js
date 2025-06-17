@@ -167,6 +167,19 @@ export const projects = [
   },
   {
     id: "1",
+    title: "Nexus Agent",
+    text: "This is an AI-driven platform designed to provide intelligent automation or agent-based solutions. The system leverages modern technologies to streamline tasks and enhance productivity through advanced AI capabilities.",
+    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    status: "done",
+    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
+    sourceCodeUrl: "https://github.com/DS-Kushagra/NexusAgent.ai",
+    demoUrl: "https://nexus-agent.vercel.app/", // Demo URL can be updated if available
+    technologies: ["Artificial Intelligence", "TypeScript"],
+  },
+  {
+    id: "2",
     title: "Vision Play",
     text: "Computer vision project designed for football matches. Leveraging YOLO for object detection, clustering for pixel-based team classification, optical flow for motion tracking, and movement analysis.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
@@ -179,9 +192,9 @@ export const projects = [
     technologies: ["Computer Vision", "AI", "ML"],
   },
   {
-    id: "2",
+    id: "3",
     title: "Network Security",
-    text: "This project is a comprehensive solution for detecting and analyzing network security threats using machine learning and deep learning techniques and also have various automations to detect phishing attacks.",
+    text: "This is a comprehensive solution for detecting and analyzing security threats using machine learning & deep learning techniques & also have various automations to detect phishing attacks.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -192,7 +205,7 @@ export const projects = [
     technologies: ["AI", "ML", "Data Science"],
   },
   {
-    id: "3",
+    id: "4",
     title: "Jarvis Voice Assistant",
     text: "Voice assistant performs tasks like opening websites, fetching news, & generating AI-driven responses, with integrated speech recognition & text-to-speech features.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
@@ -206,7 +219,7 @@ export const projects = [
     technologies: ["AI", "Python"],
   },
   {
-    id: "4",
+    id: "5",
     title: "AI ChatBot",
     text: "Designed an automated conversational bot using OpenAI API to analyze chat history and generate context-aware, humorous, and interactive responses using Python.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
@@ -218,20 +231,19 @@ export const projects = [
     demoUrl: null, // Demo URL can be updated if available
     technologies: ["AI", "Python"],
   },
-  {
-    id: "5",
-    title: "Job Scraper",
-    text: "Developed a web scraper using Python, BeautifulSoup library, and CSV to extract and store job listings from any website, including titles, companies, locations, and descriptions.",
-    backgroundUrl: "./src/assets/benefits/card-3.svg",
-    iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
-    status: "done",
-    borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    sourceCodeUrl: "https://github.com/DS-Kushagra/Job-Scrapping-Project",
-    demoUrl: null, // Demo URL can be updated if available
-    technologies: ["Python", "Web Scraping"],
-  },
-
+  // {
+  //   id: "5",
+  //   title: "Job Scraper",
+  //   text: "Developed a web scraper using Python, BeautifulSoup library, and CSV to extract and store job listings from any website, including titles, companies, locations, and descriptions.",
+  //   backgroundUrl: "./src/assets/benefits/card-3.svg",
+  //   iconUrl: benefitIcon3,
+  //   imageUrl: benefitImage2,
+  //   status: "done",
+  //   borderColor: "from-purple-500 via-blue-500 to-cyan-500",
+  //   sourceCodeUrl: "https://github.com/DS-Kushagra/Job-Scrapping-Project",
+  //   demoUrl: null, // Demo URL can be updated if available
+  //   technologies: ["Python", "Web Scraping"],
+  // },
 ];
 
 export const dataScienceProjects = [
