@@ -10,6 +10,7 @@ import Hero from "./components/Hero";
 import Pricing from "./components/Publications"
 import Services from "./components/Skills";
 import ProjectsGrid from "./components/Projects";
+import ClickSpark from "./components/ClickSpark";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
 
       <ButtonGradient />
     </>
+    </ClickSpark>
   );
 };
 
