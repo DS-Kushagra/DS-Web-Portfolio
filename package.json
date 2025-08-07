@@ -21,6 +21,7 @@
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.8.4",
     "framer-motion": "^11.16.4",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.471.0",
     "poppins": "^0.1.1",
     "react": "^18.2.0",
