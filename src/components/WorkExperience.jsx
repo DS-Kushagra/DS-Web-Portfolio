@@ -20,12 +20,12 @@ const WorkExperience = () => {
   const experiences = [
     {
       id: 1,
-      company: "TechCorp Innovation",
-      position: "Senior Full Stack Developer",
-      duration: "2023 - Present",
-      location: "San Francisco, CA",
+      company: "Unihox",
+      position: "AI & Data Science Intern",
+      duration: "July-2025 - Present",
+      location: "Pune, Maharashtra, India",
       type: "Full-time",
-      website: "techcorp.com",
+      website: "unihox.com",
       description:
         "Leading development of scalable web applications serving 1M+ users. Architected microservices infrastructure and mentored junior developers.",
       achievements: [
@@ -40,7 +40,7 @@ const WorkExperience = () => {
         "TypeScript",
         "AWS",
         "Docker",
-        "GraphQL",
+        "PostgreSQL",
       ],
       projects: 15,
       impact: "300% Performance Boost",
