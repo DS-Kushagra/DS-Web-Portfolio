@@ -165,7 +165,7 @@ const ModernAboutSection = () => {
     location: "Surat, INDIA",
     experience: "4+ years",
     email: "kushagraagrawal128@gmail.com",
-    bio: "Hi, I'm Kushagra! I'm a passionate data enthusiast with a growing expertise in data science and analytics. Beyond data, I enjoy exploring web development and collaborating on innovative projects. Let's connect and create something remarkable together!",
+    bio: "Hi, I'm Kushagra! I'm a passionate data enthusiast with a growing expertise in data science and AI. Beyond data, I enjoy exploring software development and collaborating on innovative projects. Let's connect and create something remarkable together!",
   };
   const storyContent = {
     highlights: [
@@ -193,7 +193,7 @@ const ModernAboutSection = () => {
 
   const skills = [
     { name: "Machine Learning", level: 85 },
-    { name: "Generative AI", level: 75 },
+    { name: "Agentic AI", level: 75 },
     { name: "Python", level: 85 },
     { name: "MongoDB", level: 60 },
     { name: "AWS", level: 60 },
@@ -335,7 +335,7 @@ const ModernAboutSection = () => {
             },
             {
               icon: GraduationCap,
-              label: "Projects",
+              label: "Projects Delivered",
               value: "20+",
               color: "from-cyan-400 to-blue-500",
             },
