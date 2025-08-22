@@ -401,6 +401,12 @@ const Services = () => {
   const timeline = [
     {
       year: "2025",
+      title: "Agentic AI Applications",
+      description:
+        "Actively developing industry-grade Agentic AI systems for companies",
+    },
+    {
+      year: "2025",
       title: "GenAI Foundation",
       description:
         "Took first step in exploring & learning Generative AI and its applications in data science",
@@ -410,12 +416,7 @@ const Services = () => {
       title: "Advanced Deep Learning Specialization",
       description:
         "Mastering deep learning and neural networks with Transformers Architecture",
-    },
-    {
-      year: "2024",
-      title: "Started preps for Data Science",
-      description: "Started exploring & learning everything in Data Science",
-    },
+    }
   ];
 
   return (
