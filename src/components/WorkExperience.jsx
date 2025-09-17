@@ -164,6 +164,7 @@ const WorkExperience = () => {
 
   return (
     <div
+      id="WorkExperience"
       ref={sectionRef}
       className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black relative overflow-hidden py-20 px-4"
     >
