@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Collaboration from "./components/Collaboration";
 import Contributors from "./components/Contributors";
@@ -9,8 +10,19 @@ import Pricing from "./components/Publications";
 import Services from "./components/Skills";
 import ProjectsGrid from "./components/Projects";
 import ClickSpark from "./components/ClickSpark";
+import Loader from "./components/Loader";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <Loader onComplete={handleLoadingComplete} />;
+  }
+
   return (
     <ClickSpark
       sparkColor="#00d4ff"
