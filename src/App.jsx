@@ -10,6 +10,7 @@ import Pricing from "./components/Publications";
 import Services from "./components/Skills";
 import ProjectsGrid from "./components/Projects";
 import ClickSpark from "./components/ClickSpark";
+import WorkExperience from "./components/WorkExperience";
 import Loader from "./components/Loader";
 
 const App = () => {
@@ -31,10 +32,11 @@ const App = () => {
       sparkCount={10}
       duration={500}
     >
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <div className="overflow-hidden">
         <Header />
         <Hero />
         <About />
+        <WorkExperience />
         <ProjectsGrid />
         <Collaboration />
         <Services />

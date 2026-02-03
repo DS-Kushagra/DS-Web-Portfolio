@@ -154,8 +154,8 @@ export const projectHighlights = [
 export const projects = [
   {
     id: "0",
-    title: "Project-NYXIS",
-    text: "A domain-agnostic multimodal AI. Engineered for versatility & intelligence, it delivers context-aware responses across fields—blending the power of language, vision, and audio into one groundbreaking system.",
+    title: "AgentCost",
+    text: "An open-source observability platform for LLM-powered applications. It automatically tracks every LLM call your AI agents make, calculates real-time costs, and provides real-time insights to reduce your AI infrastructure spending.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,

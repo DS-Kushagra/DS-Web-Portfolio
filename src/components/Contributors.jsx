@@ -31,6 +31,7 @@ import {
   Code2,
   LineChart as ChartIcon,
   FlaskRound as Flask,
+  ChevronDown,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
@@ -401,13 +402,12 @@ const Contributors = () => {
                     </span>
                   </div>
                   <div
-                    className={`mt-2 inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                      category.difficulty === "Expert"
-                        ? "bg-red-500/20 text-red-400"
-                        : category.difficulty === "Advanced"
+                    className={`mt-2 inline-block px-3 py-1 rounded-full text-xs font-medium ${category.difficulty === "Expert"
+                      ? "bg-red-500/20 text-red-400"
+                      : category.difficulty === "Advanced"
                         ? "bg-orange-500/20 text-orange-400"
                         : "bg-green-500/20 text-green-400"
-                    }`}
+                      }`}
                   >
                     {category.difficulty}
                   </div>
@@ -523,209 +523,271 @@ const Contributors = () => {
         >
           <button
             onClick={() => setIsFormVisible(true)}
-            className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-semibold text-lg hover:opacity-90 transition-all duration-300 transform hover:-translate-y-1"
+            className="px-8 py-3 bg-slate-900 border border-blue-500/30 text-white font-semibold rounded-full hover:bg-slate-800 transition-colors duration-300"
           >
-            Start Contributing
-            <ChevronRight className="w-5 h-5 ml-2" />
+            <span className="flex items-center gap-2">
+              Start Contributing
+              <ChevronRight className="w-5 h-5" />
+            </span>
           </button>
         </motion.div>
 
         <AnimatePresence>
           {isFormVisible && (
             <motion.div
-              className="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center z-50 p-4"
+              className="fixed inset-0 bg-black/70 backdrop-blur-lg flex items-center justify-center z-50 p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
               <motion.div
-                className="bg-gray-900 border border-gray-800 rounded-2xl p-8 max-w-md w-full relative max-h-[90vh] overflow-y-auto"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
+                className="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-700/50 rounded-3xl p-8 max-w-lg w-full relative max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl shadow-purple-500/10"
+                initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
               >
-                <button
+                <motion.button
                   onClick={() => setIsFormVisible(false)}
-                  className="absolute right-4 top-4 text-gray-400 hover:text-white transition-colors"
+                  className="absolute right-4 top-4 text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full"
+                  whileHover={{ rotate: 90 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <X className="w-6 h-6" />
-                </button>
+                  <X className="w-5 h-5" />
+                </motion.button>
 
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <GitBranch className="w-6 h-6 mr-2 text-purple-500" />
-                  Join Our Contributors
-                </h3>
+                <div className="mb-8">
+                  <motion.div
+                    className="flex items-center gap-3 mb-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    <div className="p-2 bg-purple-500/20 rounded-xl">
+                      <GitBranch className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">
+                      Join Our Contributors
+                    </h3>
+                  </motion.div>
+                  <p className="text-gray-400 text-sm ml-12">
+                    Fill in the details to get started
+                  </p>
+                </div>
 
                 <form
                   ref={form}
                   onSubmit={handleFormSubmit}
-                  className="space-y-6"
+                  className="space-y-5"
                 >
-                  <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">
-                      Name
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.15 }}
+                  >
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Name <span className="text-purple-400">*</span>
                     </label>
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:bg-gray-800/80 transition-all duration-300"
                       placeholder="Your full name"
                     />
                     {formErrors.name && (
-                      <p className="mt-1 text-sm text-red-500">
+                      <p className="mt-2 text-sm text-red-400 flex items-center gap-1">
+                        <span className="w-1 h-1 bg-red-400 rounded-full"></span>
                         {formErrors.name}
                       </p>
                     )}
-                  </div>
+                  </motion.div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">
-                      Email
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Email <span className="text-purple-400">*</span>
                     </label>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:bg-gray-800/80 transition-all duration-300"
                       placeholder="your.email@example.com"
                     />
                     {formErrors.email && (
-                      <p className="mt-1 text-sm text-red-500">
+                      <p className="mt-2 text-sm text-red-400 flex items-center gap-1">
+                        <span className="w-1 h-1 bg-red-400 rounded-full"></span>
                         {formErrors.email}
                       </p>
                     )}
-                  </div>
+                  </motion.div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">
-                      Expertise
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.25 }}
+                  >
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Expertise <span className="text-purple-400">*</span>
                     </label>
                     <input
                       type="text"
                       name="expertise"
                       value={formData.expertise}
                       onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Your areas of expertise"
+                      className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:bg-gray-800/80 transition-all duration-300"
+                      placeholder="e.g., Machine Learning, Data Engineering"
                     />
                     {formErrors.expertise && (
-                      <p className="mt-1 text-sm text-red-500">
+                      <p className="mt-2 text-sm text-red-400 flex items-center gap-1">
+                        <span className="w-1 h-1 bg-red-400 rounded-full"></span>
                         {formErrors.expertise}
                       </p>
                     )}
-                  </div>
+                  </motion.div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">
-                      GitHub Profile (optional)
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      GitHub Profile{" "}
+                      <span className="text-gray-500 text-xs">(optional)</span>
                     </label>
                     <input
                       type="text"
                       name="github"
                       value={formData.github}
                       onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:bg-gray-800/80 transition-all duration-300"
                       placeholder="https://github.com/username"
                     />
                     {formErrors.github && (
-                      <p className="mt-1 text-sm text-red-500">
+                      <p className="mt-2 text-sm text-red-400 flex items-center gap-1">
+                        <span className="w-1 h-1 bg-red-400 rounded-full"></span>
                         {formErrors.github}
                       </p>
                     )}
-                  </div>
+                  </motion.div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">
-                      Availability
-                    </label>
-                    <select
-                      name="availability"
-                      value={formData.availability}
-                      onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  <div className="grid grid-cols-2 gap-4">
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.35 }}
                     >
-                      <option value="full-time">Full-time</option>
-                      <option value="part-time">Part-time</option>
-                      <option value="weekends">Weekends</option>
-                      <option value="flexible">Flexible</option>
-                    </select>
-                  </div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Availability
+                      </label>
+                      <div className="relative">
+                        <select
+                          name="availability"
+                          value={formData.availability}
+                          onChange={handleInputChange}
+                          className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500/50 focus:bg-gray-800/80 transition-all duration-300 appearance-none cursor-pointer"
+                        >
+                          <option value="full-time">Full-time</option>
+                          <option value="part-time">Part-time</option>
+                          <option value="weekends">Weekends</option>
+                          <option value="flexible">Flexible</option>
+                        </select>
+                        <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                      </div>
+                    </motion.div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">
-                      Project Interest
-                    </label>
-                    <select
-                      name="projectInterest"
-                      value={formData.projectInterest}
-                      onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
                     >
-                      <option value="machine-learning">
-                        Machine Learning Models
-                      </option>
-                      <option value="data-pipeline">
-                        Data Pipeline Enhancement
-                      </option>
-                      <option value="neural-network">
-                        Neural Network Architecture
-                      </option>
-                      <option value="ai-research">
-                        AI Research Implementation
-                      </option>
-                      <option value="model-optimization">
-                        Model Optimization
-                      </option>
-                      <option value="experiment-framework">
-                        Experiment Framework
-                      </option>
-                    </select>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                        Project Interest
+                      </label>
+                      <div className="relative">
+                        <select
+                          name="projectInterest"
+                          value={formData.projectInterest}
+                          onChange={handleInputChange}
+                          className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500/50 focus:bg-gray-800/80 transition-all duration-300 appearance-none cursor-pointer"
+                        >
+                          <option value="machine-learning">ML Models</option>
+                          <option value="data-pipeline">Data Pipeline</option>
+                          <option value="neural-network">
+                            Neural Networks
+                          </option>
+                          <option value="ai-research">AI Research</option>
+                          <option value="model-optimization">
+                            Model Optimization
+                          </option>
+                          <option value="experiment-framework">
+                            Experiment Framework
+                          </option>
+                        </select>
+                        <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                      </div>
+                    </motion.div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-400 mb-2">
-                      How would you like to contribute?
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45 }}
+                  >
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      How would you like to contribute?{" "}
+                      <span className="text-purple-400">*</span>
                     </label>
                     <textarea
                       name="contribution"
                       value={formData.contribution}
                       onChange={handleInputChange}
-                      rows={4}
-                      className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                      placeholder="Describe how you'd like to contribute..."
+                      rows={3}
+                      className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:bg-gray-800/80 transition-all duration-300 resize-none"
+                      placeholder="Describe your ideas and how you'd like to contribute..."
                     />
                     {formErrors.contribution && (
-                      <p className="mt-1 text-sm text-red-500">
+                      <p className="mt-2 text-sm text-red-400 flex items-center gap-1">
+                        <span className="w-1 h-1 bg-red-400 rounded-full"></span>
                         {formErrors.contribution}
                       </p>
                     )}
-                  </div>
+                  </motion.div>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-semibold py-4 rounded-lg relative overflow-hidden disabled:opacity-70"
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="pt-2"
                   >
                     {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <div className="w-full h-12 bg-gray-800/50 rounded-full flex items-center justify-center">
+                        <div className="w-6 h-6 border-2 border-purple-400 border-t-transparent rounded-full animate-spin" />
                       </div>
                     ) : (
-                      <span className="flex items-center justify-center">
-                        Submit Application
-                        <ChevronRight className="w-5 h-5 ml-2" />
-                      </span>
+                      <button
+                        type="submit"
+                        className="w-full py-4 bg-slate-900 border border-blue-500/30 text-white font-semibold rounded-full hover:bg-slate-800 transition-colors duration-300 flex items-center justify-center"
+                      >
+                        <span className="flex items-center gap-2">
+                          Submit Application
+                          <ChevronRight className="w-5 h-5" />
+                        </span>
+                      </button>
                     )}
-                  </button>
+                  </motion.div>
                 </form>
 
                 <AnimatePresence>
                   {showSuccessCard && (
                     <motion.div
-                      className="absolute inset-0 bg-gray-900 flex items-center justify-center rounded-2xl"
+                      className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center rounded-3xl"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
@@ -734,14 +796,31 @@ const Contributors = () => {
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
-                          transition={{ type: "spring", stiffness: 200 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            damping: 15,
+                          }}
+                          className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"
                         >
-                          <Check className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                          <Check className="w-10 h-10 text-green-400" />
                         </motion.div>
-                        <h4 className="text-xl font-semibold text-white mb-2">
+                        <motion.h4
+                          className="text-2xl font-bold text-white mb-2"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.2 }}
+                        >
                           Application Submitted!
-                        </h4>
-                        <p className="text-gray-400">We'll be in touch soon.</p>
+                        </motion.h4>
+                        <motion.p
+                          className="text-gray-400"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.3 }}
+                        >
+                          We'll be in touch soon.
+                        </motion.p>
                       </div>
                     </motion.div>
                   )}

@@ -4,10 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import {
   Brain,
-  Code2,
-  Briefcase,
-  GraduationCap,
-  Heart,
   Mail,
   Github,
   Linkedin,
@@ -19,7 +15,9 @@ import {
   Users,
   TrendingUp,
   LineChart,
+  Star,
 } from "lucide-react";
+import { ExpandableCard } from "./ExpandableCard";
 import {
   LineChart as RechartsLineChart,
   Line,
@@ -33,11 +31,11 @@ import {
 const AnimatedBackground = () => (
   <div className="absolute inset-0">
     <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 1] }}>
-      <Stars 
-        radius={100} 
-        depth={50} 
-        count={3000} 
-        factor={4} 
+      <Stars
+        radius={100}
+        depth={50}
+        count={3000}
+        factor={4}
         saturation={0.5}
         fade
         speed={0.5}
@@ -70,28 +68,7 @@ const SkillBar = ({ skill, index, isVisible }) => (
   </motion.div>
 );
 
-// Enhanced stat card with better hover effects
-const StatCard = ({ icon: Icon, label, value, color, index }) => (
-  <motion.div
-    className="relative group"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: index * 0.1 }}
-    whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-  >
-    <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl blur-lg"
-         style={{ background: color }} />
-    <div className="relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 group-hover:border-white/20 transition-all duration-300">
-      <div className="flex flex-col items-center">
-        <Icon className="w-8 h-8 mb-4 text-purple-500 group-hover:text-purple-400 transition-colors duration-300" />
-        <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-          {value}
-        </div>
-        <div className="text-sm text-gray-400 group-hover:text-gray-300">{label}</div>
-      </div>
-    </div>
-  </motion.div>
-);
+
 
 // Enhanced tab button with better feedback
 const TabButton = ({ id, label, icon: Icon, activeTab, setActiveTab }) => (
@@ -99,11 +76,10 @@ const TabButton = ({ id, label, icon: Icon, activeTab, setActiveTab }) => (
     whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.98 }}
     onClick={() => setActiveTab(id)}
-    className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-      activeTab === id
-        ? "bg-gradient-to-r from-purple-600 to-cyan-400 text-white shadow-lg shadow-purple-500/20"
-        : "bg-white/5 hover:bg-white/10 hover:shadow-lg hover:shadow-purple-500/10"
-    }`}
+    className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${activeTab === id
+      ? "bg-gradient-to-r from-purple-600 to-cyan-400 text-white shadow-lg shadow-purple-500/20"
+      : "bg-white/5 hover:bg-white/10 hover:shadow-lg hover:shadow-purple-500/10"
+      }`}
   >
     <Icon className="w-5 h-5 mr-2" />
     {label}
@@ -161,42 +137,41 @@ const ModernAboutSection = () => {
   // Personal details
   const personalInfo = {
     name: "Kushagra Agrawal",
-    title: "Budding Data Scientist",
+    title: "Data Scientist & Engineer",
     location: "Surat, INDIA",
     experience: "4+ years",
     email: "kushagraagrawal128@gmail.com",
-    bio: "Hi, I'm Kushagra! I'm a passionate data enthusiast with a growing expertise in data science and AI. Beyond data, I enjoy exploring software development and collaborating on innovative projects. Let's connect and create something remarkable together!",
+    bio: "I transform complex data into actionable strategic insights. With a strong foundation in both engineering and data science, I build scalable AI solutions that drive measurable business growth.",
   };
   const storyContent = {
     highlights: [
       {
-        title: "Data Science Journey",
+        title: "Engineering Foundation",
         content:
-          "Started with Python basics and gradually evolved into machine learning and deep learning, tackling complex real-world challenges.",
+          "Leveraging a rigorous engineering background to build robust, scalable machine learning pipelines and production-grade AI systems.",
         icon: Brain,
       },
       {
-        title: "Innovation Focus",
+        title: "Strategic Innovation",
         content:
-          "Developed multiple end-to-end ML solutions, focusing on practical applications and business impact.",
+          "Focusing on high-ROI initiatives, translating technical capability into tangible business value through predictive modeling and automation.",
         icon: Zap,
       },
       {
-        title: "Collaborative Spirit",
+        title: "Collaborative Leadership",
         content:
-          "Actively participated in team projects and hackathons, learning from peers and contributing to shared success.",
+          "Driving cross-functional success by bridging the gap between technical complexity and stakeholder goals.",
         icon: Users,
       },
     ],
-
   };
 
   const skills = [
-    { name: "Machine Learning", level: 85 },
-    { name: "Agentic AI", level: 75 },
-    { name: "Python", level: 85 },
-    { name: "MongoDB", level: 60 },
-    { name: "AWS", level: 60 },
+    { name: "Machine Learning & AI", level: 90 },
+    { name: "Data Engineering / ETL", level: 85 },
+    { name: "Python & Statistical Analysis", level: 95 },
+    { name: "Cloud Infrastructure (AWS)", level: 75 },
+    { name: "Strategic Problem Solving", level: 90 },
   ];
 
   const impactMetrics = {
@@ -212,38 +187,38 @@ const ModernAboutSection = () => {
       {
         icon: Zap,
         metric: "45%",
-        label: "Performance Boost",
-        detail: "Improved application response time",
+        label: "Efficiency Gain",
+        detail: "Optimization of core algorithms",
       },
       {
         icon: Users,
-        metric: "500+",
-        label: "Connections",
-        detail: "Benefited with resources",
+        metric: "20+",
+        label: "Projects Delivered",
+        detail: "End-to-end ML solutions",
       },
       {
         icon: TrendingUp,
         metric: "98%",
-        label: "Code Quality",
-        detail: "Test coverage maintained",
+        label: "Accuracy",
+        detail: "In predictive maintenance models",
       },
     ],
     innovationHighlights: [
       {
-        title: "Model Integration",
+        title: "Predictive Analytics",
         description:
-          "Implemented machine learning models for predictive analytics",
-        impact: "32% accuracy improved ↑ ",
+          "Deployed churn prediction models reducing customer attrition.",
+        impact: "15% Retention ↑",
       },
       {
-        title: "Data Pipeline",
-        description: "Built automated ETL workflows",
-        impact: "3hr/day saved ↓",
+        title: "Automated Workflows",
+        description: "Engineered ETL pipelines replacing manual reporting.",
+        impact: "20hrs/week Saved",
       },
       {
-        title: "CI/CD Pipeline",
-        description: "AWS",
-        impact: "40% cost reduction ↓",
+        title: "Infrastructure Cost",
+        description: "Optimized cloud resource allocation.",
+        impact: "30% Reduction ↓",
       },
     ],
   };
@@ -266,7 +241,7 @@ const ModernAboutSection = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#030014] overflow-hidden">
+    <div className="relative min-h-screen bg-slate-950 overflow-hidden font-sans">
       <AnimatedBackground />
 
       <motion.div
@@ -275,35 +250,27 @@ const ModernAboutSection = () => {
       >
         {/* Enhanced Hero Section */}
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-24"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
+            initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
             <motion.h1
-              className="text-7xl font-bold mb-6 relative"
-              animate={{
-                textShadow: [
-                  "0 0 20px rgba(139, 92, 246, 0.5)",
-                  "0 0 35px rgba(139, 92, 246, 0.3)",
-                  "0 0 20px rgba(139, 92, 246, 0.5)",
-                ],
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
+              className="text-6xl md:text-7xl font-bold mb-6 tracking-tight relative"
             >
-              <span className="bg-gradient-to-r from-purple-500 via-cyan-300 to-purple-500 text-transparent bg-clip-text" id="About" >
+              <span className="bg-gradient-to-br from-white via-slate-200 to-slate-400 text-transparent bg-clip-text drop-shadow-sm" id="About" >
                 {personalInfo.name}
               </span>
             </motion.h1>
 
             <motion.div
-              className="text-2xl text-gray-300"
+              className="text-2xl text-blue-200/80 font-light tracking-wide uppercase"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -313,55 +280,97 @@ const ModernAboutSection = () => {
           </motion.div>
 
           <motion.div
-            className="max-w-2xl mx-auto p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-xl border border-white/10 shadow-xl shadow-purple-500/5"
+            className="max-w-3xl mx-auto p-1 backdrop-blur-3xl rounded-3xl bg-gradient-to-br from-white/10 to-transparent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <p className="text-gray-300 text-lg leading-relaxed">
-              {personalInfo.bio}
-            </p>
+            <div className="bg-slate-900/80 p-8 rounded-[22px] border border-white/5 shadow-2xl shadow-black/50">
+              <p className="text-slate-300 text-lg leading-relaxed font-light">
+                {personalInfo.bio}
+              </p>
+            </div>
           </motion.div>
         </motion.div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+        {/* Stats Grid with Expandable Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 mb-24">
           {[
             {
-              icon: Briefcase,
-              label: "Experience in programming",
-              value: personalInfo.experience,
-              color: "from-purple-600 to-cyan-400",
+              title: "Experience",
+              description: "4+ Years Professional",
+              src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop",
+              ctaText: "View Journey",
+              content: () => (
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white">Professional Journey</h4>
+                  <p className="text-slate-300 leading-relaxed">
+                    Over 4+ years, I have honed my skills in programming, starting from basic Python scripting to architecting complex AI solutions. My journey involves continuous learning, adapting to new technologies, and solving real-world problems through code.
+                  </p>
+                </div>
+              ),
             },
             {
-              icon: GraduationCap,
-              label: "Projects Delivered",
-              value: "20+",
-              color: "from-cyan-400 to-blue-500",
+              title: "Projects",
+              description: "20+ Delivered Solutions",
+              src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+              ctaText: "See Projects",
+              content: () => (
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white">Impactful Projects</h4>
+                  <p className="text-slate-300 leading-relaxed">
+                    I have successfully delivered over 20 projects ranging from web applications to sophisticated machine learning models. Each project represents a step forward in understanding user needs and technical feasibility.
+                  </p>
+                </div>
+              ),
             },
             {
-              icon: Heart,
-              label: "Endorsements",
-              value: "100+",
-              color: "from-blue-500 to-purple-600",
+              title: "Community",
+              description: "100+ Endorsements",
+              src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop",
+              ctaText: "View Community",
+              content: () => (
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white">Community Engagement</h4>
+                  <p className="text-slate-300 leading-relaxed">
+                    Building connections is key. I have received over 100 endorsements from peers and mentors, reflecting my commitment to collaboration and high-quality work in the tech community.
+                  </p>
+                </div>
+              ),
             },
             {
-              icon: Code2,
-              label: "Technologies",
-              value: "15+",
-              color: "from-purple-600 to-pink-500",
+              title: "Tech Stack",
+              description: "15+ Technologies",
+              src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
+              ctaText: "Explore Tech",
+              content: () => (
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white">Technical Arsenal</h4>
+                  <p className="text-slate-300 leading-relaxed">
+                    My toolkit includes over 15 distinct technologies, covering the full stack from frontend frameworks like React to backend services, databases, and advanced AI/ML libraries like TensorFlow and PyTorch.
+                  </p>
+                </div>
+              ),
             },
-          ].map((stat, index) => (
-            <StatCard key={index} {...stat} index={index} />
+          ].map((card, index) => (
+            <ExpandableCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              src={card.src}
+              className="w-full bg-slate-900/60 dark:bg-slate-900/60 border-white/5 backdrop-blur-md"
+            >
+              {card.content()}
+            </ExpandableCard>
           ))}
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mt-20 mb-12">
+        <div className="flex flex-wrap justify-center gap-6 mt-20 mb-16">
           {[
-            { id: "story", label: "My Story", icon: ScrollText },
-            { id: "skills", label: "Skills", icon: Brain },
-            { id: "impact", label: "Impact Metrics", icon: LineChart },
+            { id: "story", label: "Professional Narrative", icon: ScrollText },
+            { id: "skills", label: "Core Competencies", icon: Brain },
+            { id: "impact", label: "Impact & ROI", icon: LineChart },
           ].map((tab) => (
             <TabButton
               key={tab.id}
@@ -376,107 +385,76 @@ const ModernAboutSection = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="max-w-4xl mx-auto"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="max-w-5xl mx-auto"
           >
-          {activeTab === "story" && (
-          <div className="space-y-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="prose prose-invert max-w-none"
-            >
-              <div className="p-6 rounded-xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-sm border border-white/10">
-                <p className="text-lg leading-relaxed text-gray-300">
-                  From a curious learner to a budding data scientist, my journey has been one of continuous exploration and growth. I've progressively immersed myself in the fascinating world of data science, focusing on creating meaningful impact through technology and innovation.
-                </p>
+            {activeTab === "story" && (
+              <div className="grid md:grid-cols-2 gap-12 items-start">
+                <div className="space-y-8">
+                  <p className="text-xl leading-relaxed text-slate-300 font-light">
+                    My career is built on a simple premise: <span className="text-white font-medium">Technology exists to solve meaningful problems.</span>
+                  </p>
+                  <p className="text-lg leading-relaxed text-slate-400">
+                    From my early days of exploring Python to leading complex AI implementations, I've always prioritized structural integrity and scalability. I don't just write code; I engineer solutions that stand the test of time and scale with business needs.
+                  </p>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-white/5"
+                  >
+                    <h3 className="text-lg font-semibold mb-4 text-white flex items-center gap-2">
+                      <Star className="w-5 h-5 text-indigo-400" />
+                      Philosophy
+                    </h3>
+                    <p className="text-slate-300 leading-relaxed italic border-l-2 border-indigo-500 pl-4 py-1">
+                      "Precision in code, clarity in thought, and impact in execution."
+                    </p>
+                  </motion.div>
+                </div>
+
+                <div className="grid gap-6">
+                  {storyContent.highlights.map((highlight, index) => (
+                    <StoryCard key={index} {...highlight} index={index} />
+                  ))}
+                </div>
               </div>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-              {storyContent.highlights.map((highlight, index) => (
-                <StoryCard key={index} {...highlight} index={index} />
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
-            >
-              <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                Philosophy & Approach
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                My approach combines technical expertise with creative problem-solving, always focusing on delivering value through clean, maintainable code and intuitive user experiences. I believe in the power of data to drive innovation and create positive impact, while maintaining a strong commitment to continuous learning and growth.
-              </p>
-            </motion.div>
-          </div>
-        )}
+            )}
 
 
             {activeTab === "skills" && (
-              <div className="space-y-6">
-                {skills.map((skill, index) => (
-                  <SkillBar
-                    key={skill.name}
-                    skill={skill}
-                    index={index}
-                    isVisible={skillsVisible}
-                  />
-                ))}
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className="space-y-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Technical Proficiency</h3>
+                  <div className="space-y-6">
+                    {skills.map((skill, index) => (
+                      <SkillBar
+                        key={skill.name}
+                        skill={skill}
+                        index={index}
+                        isVisible={skillsVisible}
+                      />
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-slate-900/50 p-8 rounded-3xl border border-white/5 backdrop-blur-sm">
+                  <h3 className="text-2xl font-bold text-white mb-6">Strategic Focus</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {["System Architecture", "Scalability", "Data Privacy", "Model Optimization", "API Design", "Agile Methodology"].map((tag, i) => (
+                      <span key={i} className="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm border border-slate-700">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
 
             {activeTab === "impact" && (
-              <div className="space-y-12">
-                {/* Enhanced Contribution Graph */}
-                <div className="bg-white/5 p-6 rounded-xl backdrop-blur-sm border border-white/10">
-                  <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                    Code Contribution Trend
-                  </h3>
-                  <div className="h-64">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <RechartsLineChart data={impactMetrics.codeContributions}>
-                        <XAxis dataKey="month" stroke="#ffffff60" />
-                        <YAxis stroke="#ffffff60" />
-                        <Tooltip
-                          contentStyle={{
-                            background: "rgba(0,0,0,0.8)",
-                            border: "1px solid rgba(255,255,255,0.1)",
-                            borderRadius: "8px",
-                            padding: "8px 12px",
-                          }}
-                          itemStyle={{ color: "#fff" }}
-                        />
-                        <Line
-                          type="monotone"
-                          dataKey="contributions"
-                          stroke="url(#gradient)"
-                          strokeWidth={3}
-                          dot={{ fill: "#8b5cf6", strokeWidth: 2 }}
-                        />
-                        <defs>
-                          <linearGradient
-                            id="gradient"
-                            x1="0"
-                            y1="0"
-                            x2="1"
-                            y2="0"
-                          >
-                            <stop offset="0%" stopColor="#8b5cf6" />
-                            <stop offset="100%" stopColor="#06b6d4" />
-                          </linearGradient>
-                        </defs>
-                      </RechartsLineChart>
-                    </ResponsiveContainer>
-                  </div>
-                </div>
-
+              <div className="space-y-16">
                 {/* Key Achievements */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {impactMetrics.keyAchievements.map((achievement, index) => (
@@ -484,31 +462,68 @@ const ModernAboutSection = () => {
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.2 }}
-                      className="bg-white/5 p-6 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-slate-900/80 p-6 rounded-2xl border border-white/5 group hover:border-indigo-500/30 transition-all duration-300"
                     >
-                      <achievement.icon className="w-8 h-8 mb-4 text-transparent bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text" />
-                      <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-3 rounded-lg bg-indigo-500/10 text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
+                          <achievement.icon className="w-6 h-6" />
+                        </div>
+                      </div>
+                      <div className="text-4xl font-bold mb-2 text-white tracking-tight">
                         {achievement.metric}
                       </div>
-                      <div className="text-lg font-semibold mb-1 text-gray-300">
+                      <div className="text-lg font-medium mb-1 text-slate-200">
                         {achievement.label}
                       </div>
-                      <div className="text-gray-400">{achievement.detail}</div>
+                      <div className="text-slate-400 text-sm">{achievement.detail}</div>
                     </motion.div>
                   ))}
                 </div>
 
                 {/* Innovation Highlights */}
-                <div className="space-y-6">
-                  <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-                    Innovation Highlights
-                  </h3>
-                  {impactMetrics.innovationHighlights.map(
-                    (highlight, index) => (
-                      <ImpactCard key={index} {...highlight} index={index} />
-                    )
-                  )}
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-slate-900/50 p-8 rounded-3xl border border-white/5">
+                    <h3 className="text-xl font-bold mb-8 text-white flex items-center gap-3">
+                      <TrendingUp className="w-5 h-5 text-indigo-400" />
+                      Performance Trends
+                    </h3>
+                    <div className="h-64">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <RechartsLineChart data={impactMetrics.codeContributions}>
+                          <XAxis dataKey="month" stroke="#94a3b8" tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
+                          <YAxis stroke="#94a3b8" tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
+                          <Tooltip
+                            contentStyle={{
+                              background: "#0f172a",
+                              border: "1px solid #1e293b",
+                              borderRadius: "8px",
+                              padding: "12px",
+                              color: "#f8fafc"
+                            }}
+                            itemStyle={{ color: "#e2e8f0" }}
+                          />
+                          <Line
+                            type="monotone"
+                            dataKey="contributions"
+                            stroke="#6366f1"
+                            strokeWidth={3}
+                            dot={{ fill: "#6366f1", strokeWidth: 4, r: 4 }}
+                            activeDot={{ r: 6, stroke: "#fff", strokeWidth: 2 }}
+                          />
+                        </RechartsLineChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold mb-4 text-white pl-2">Strategic Initiatives</h3>
+                    {impactMetrics.innovationHighlights.map(
+                      (highlight, index) => (
+                        <ImpactCard key={index} {...highlight} index={index} />
+                      )
+                    )}
+                  </div>
                 </div>
               </div>
             )}
@@ -520,9 +535,9 @@ const ModernAboutSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-20 text-center"
+          className="mt-32 border-t border-slate-800 pt-16 text-center"
         >
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-8">
             {[
               { icon: Github, link: "https://github.com/DS-Kushagra" },
               {
@@ -537,8 +552,8 @@ const ModernAboutSection = () => {
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className="p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+                whileHover={{ y: -3, color: "#fff" }}
+                className="p-3 text-slate-400 hover:text-white transition-colors"
               >
                 <social.icon className="w-6 h-6" />
               </motion.a>
@@ -548,13 +563,12 @@ const ModernAboutSection = () => {
           <motion.a
             href="/Resume.pdf"
             download="Kushagra-Resume.pdf"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-8 inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-400 text-white font-semibold hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="mt-10 inline-flex items-center px-8 py-3 rounded-full bg-white text-slate-900 font-semibold hover:bg-slate-200 transition-colors duration-300"
           >
-            <Download className="w-5 h-5 mr-2" />
+            <Download className="w-4 h-4 mr-2" />
             Download Resume
-            <ChevronRight className="w-5 h-5 ml-1" />
           </motion.a>
         </motion.div>
       </motion.div>
