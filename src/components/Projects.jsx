@@ -107,11 +107,10 @@ const ProjectsSection = ({ techFilter }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCategory()}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                selectedCategory === category
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
                   ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg shadow-purple-500/25"
                   : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
-              }`}
+                }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </motion.button>
@@ -152,10 +151,6 @@ const ProjectCard = ({ project, index }) => {
         delay: index * 0.1,
       },
     },
-    hover: {
-      y: -8,
-      transition: { duration: 0.3, ease: "easeOut" },
-    },
   };
 
   return (
@@ -164,7 +159,6 @@ const ProjectCard = ({ project, index }) => {
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      whileHover="hover"
       className="relative group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -202,10 +196,9 @@ const ProjectCard = ({ project, index }) => {
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               className={`px-3 py-1.5 rounded-full text-sm backdrop-blur-md flex items-center gap-2
-                ${
-                  project.status === "done"
-                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
-                    : "bg-amber-500/20 text-amber-300 border border-amber-500/30"
+                ${project.status === "done"
+                  ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                  : "bg-amber-500/20 text-amber-300 border border-amber-500/30"
                 }`}
             >
               <span className="relative flex h-2 w-2">
