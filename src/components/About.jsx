@@ -298,7 +298,7 @@ const ModernAboutSection = () => {
           {[
             {
               title: "Experience",
-              description: "4+ Years Professional",
+              description: "4+ Years Programming",
               src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop",
               ctaText: "View Journey",
               content: () => (
