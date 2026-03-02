@@ -161,8 +161,8 @@ export const projects = [
     imageUrl: benefitImage2,
     status: "",
     borderColor: "from-purple-500 via-blue-500 to-cyan-500",
-    // sourceCodeUrl: "https://github.com/DS-Kushagra/Vision-Play",
-    demoUrl: null, // Demo URL can be updated if available
+    sourceCodeUrl: "https://github.com/agentcost-ai/agentcost-sdk",
+    demoUrl: "https://agentcost.tech", // Demo URL can be updated if available
     technologies: ["Artificial Intelligence"],
   },
   {
