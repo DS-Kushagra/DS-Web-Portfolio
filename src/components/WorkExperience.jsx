@@ -9,6 +9,7 @@ import {
   Code,
   Users,
   Briefcase,
+  Cpu,
 } from "lucide-react";
 
 const WorkExperience = () => {

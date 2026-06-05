@@ -70,20 +70,18 @@ const SkillBar = ({ skill, index, isVisible }) => (
 
 
 
-// Enhanced tab button with better feedback
+// Professional tab button
 const TabButton = ({ id, label, icon: Icon, activeTab, setActiveTab }) => (
-  <motion.button
-    whileHover={{ scale: 1.02 }}
-    whileTap={{ scale: 0.98 }}
+  <button
     onClick={() => setActiveTab(id)}
-    className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${activeTab === id
-      ? "bg-gradient-to-r from-purple-600 to-cyan-400 text-white shadow-lg shadow-purple-500/20"
-      : "bg-white/5 hover:bg-white/10 hover:shadow-lg hover:shadow-purple-500/10"
+    className={`flex items-center px-6 py-3 rounded-lg border font-medium transition-colors duration-200 ${activeTab === id
+      ? "bg-slate-800/90 text-white border-blue-500/60 shadow-sm shadow-blue-950/30"
+      : "bg-slate-900/70 text-slate-300 border-white/10"
       }`}
   >
     <Icon className="w-5 h-5 mr-2" />
     {label}
-  </motion.button>
+  </button>
 );
 
 // Enhanced impact card
