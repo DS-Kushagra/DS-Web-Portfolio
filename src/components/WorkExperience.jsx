@@ -48,7 +48,7 @@ const WorkExperience = () => {
       projects: 4,
       impact: "99%+ Availability",
       color: "from-cyan-600 via-blue-600 to-violet-800",
-      icon: <Cpu className="w-6 h-6" />,
+      icon: <Code className="w-6 h-6" />,
     },
     {
       id: 2,
