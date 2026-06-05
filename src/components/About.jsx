@@ -55,14 +55,14 @@ const SkillBar = ({ skill, index, isVisible }) => (
   >
     <div className="flex justify-between text-sm">
       <span className="font-medium">{skill.name}</span>
-      <span className="text-purple-400">{skill.level}%</span>
+      <span className="text-blue-300">{skill.level}%</span>
     </div>
     <div className="h-2 bg-white/10 rounded-full overflow-hidden">
       <motion.div
         initial={{ width: "0%" }}
         animate={{ width: isVisible ? `${skill.level}%` : "0%" }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="h-full bg-gradient-to-r from-purple-600 to-cyan-400"
+        className="h-full bg-gradient-to-r from-blue-700 via-blue-500 to-slate-300"
       />
     </div>
   </motion.div>
