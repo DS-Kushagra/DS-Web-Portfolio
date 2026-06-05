@@ -676,62 +676,6 @@ const Hero = () => {
                     </div>
                   </motion.div>
 
-                  {/* Simplified Performance Metrics */}
-                  <motion.div
-                    className="absolute hidden md:block top-2 right-2 sm:top-4 sm:right-4 backdrop-blur-xl rounded-lg p-2 sm:p-3 bg-white/10 border border-white/20"
-                    animate={{
-                      y: [3, -3, 3],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <div className="text-white text-xs sm:text-sm font-medium mb-1 sm:mb-2">
-                      Performance
-                    </div>
-                    <div className="space-y-0.5 sm:space-y-1">
-                      {[
-                        {
-                          label: "Accuracy",
-                          value: 98.5,
-                          color: "bg-green-400",
-                        },
-                        { label: "Speed", value: 94.2, color: "bg-blue-400" },
-                        {
-                          label: "Efficiency",
-                          value: 96.8,
-                          color: "bg-purple-400",
-                        },
-                      ].map((metric, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center gap-1 sm:gap-2"
-                        >
-                          <span className="text-xs text-white/80 w-8 sm:w-12">
-                            {metric.label}
-                          </span>
-                          <div className="w-10 sm:w-16 h-0.5 sm:h-1 bg-white/20 rounded-full overflow-hidden">
-                            <motion.div
-                              className={`h-full ${metric.color} rounded-full`}
-                              initial={{ width: 0 }}
-                              animate={{ width: `${metric.value}%` }}
-                              transition={{
-                                duration: 2,
-                                delay: i * 0.2,
-                                ease: "easeOut",
-                              }}
-                            />
-                          </div>
-                          <span className="text-xs text-white font-medium">
-                            {metric.value}%
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-
                   {/* Simplified Floating Elements with ScrollParallax */}
                   <ScrollParallax isAbsolutelyPositioned>
                     <motion.div
