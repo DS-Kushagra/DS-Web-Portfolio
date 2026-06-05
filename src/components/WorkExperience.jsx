@@ -20,6 +20,37 @@ const WorkExperience = () => {
   const experiences = [
     {
       id: 1,
+      company: "Lets Automation",
+      position: "AI/ML Engineer",
+      duration: "2026 - Present",
+      location: "Surat, Gujarat, India",
+      type: "Full-time",
+      website: "letsautomation.com",
+      description:
+        "Building production-grade AI generation systems with resilient provider routing, real-time orchestration, cost controls, and image transformation workflows.",
+      achievements: [
+        "Architected multi-provider AI rendering pipeline integrating OpenAI DALL-E, Stability AI, and BananaDev with priority-based routing and circuit breaker fault tolerance, achieving 99%+ image generation availability.",
+        "Engineered a real-time AI job orchestration system using BullMQ and Redis to batch-process 10 parallel language variants per request, with real-time progress updates via SSE streaming.",
+        "Implemented AI cost optimization framework with graduated spend guardrails from warning to tier blocking to emergency fallback, tracking daily provider budgets in Redis to prevent API cost overruns while maintaining service continuity.",
+        "Designed an img2img generation workflow that processes user inputs through canvas overlay rendering, AI transformation, and Cloudinary CDN upload, supporting multiple quality tiers.",
+      ],
+      technologies: [
+        "Python",
+        "JavaScript",
+        "Pinecone",
+        "BullMQ",
+        "Redis",
+        "SSE",
+        "Cloudinary",
+        "Docker",
+      ],
+      projects: 4,
+      impact: "99%+ Availability",
+      color: "from-cyan-600 via-blue-600 to-violet-800",
+      icon: <Cpu className="w-6 h-6" />,
+    },
+    {
+      id: 2,
       company: "Unihox",
       position: "AI & Data Science Intern",
       duration: "July 2025 - Dec 2025",

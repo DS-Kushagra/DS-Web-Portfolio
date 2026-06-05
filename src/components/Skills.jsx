@@ -400,10 +400,10 @@ const Services = () => {
 
   const timeline = [
     {
-      year: "2025",
-      title: "Agentic AI Applications",
+      year: "2026",
+      title: "Production AI Engineering",
       description:
-        "Actively developing industry-grade Agentic AI systems for companies",
+        "Building reliable AI generation systems with provider routing, Redis-backed job queues, SSE progress streaming, and practical cost guardrails for production workloads",
     },
     {
       year: "2025",
